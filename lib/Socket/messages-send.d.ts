@@ -21,6 +21,7 @@ export declare const makeMessagesSocket: (config: SocketConfig) => {
     fetchPrivacySettings: (force?: boolean) => Promise<{
         [_: string]: string;
     }>;
+    sendPeerDataOperationMessage: (pdoMessage: proto.Message.IPeerDataOperationRequestMessage) => Promise<string>;
     updateMediaMessage: (message: proto.IWebMessageInfo) => Promise<proto.IWebMessageInfo>;
     sendMessage: (jid: string, content: AnyMessageContent, options?: MiscMessageGenerationOptions) => Promise<proto.WebMessageInfo | undefined>;
     subscribeNewsletterUpdates: (jid: string) => Promise<{
